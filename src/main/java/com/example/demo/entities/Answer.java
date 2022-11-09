@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(nullable = false, length = 255)
     private String label;
@@ -18,7 +18,7 @@ public class Answer {
     @ManyToOne
     private Question question;
 
-    public Answer(Long id, String label, Boolean isCorrect, Question question) {
+    public Answer(int id, String label, Boolean isCorrect, Question question) {
         this.id = id;
         this.label = label;
         this.isCorrect = isCorrect;
@@ -28,11 +28,11 @@ public class Answer {
     public Answer() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

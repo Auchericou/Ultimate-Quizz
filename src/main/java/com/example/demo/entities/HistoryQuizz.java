@@ -8,7 +8,7 @@ import java.util.List;
 public class HistoryQuizz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @ManyToOne
     private User user;
@@ -23,18 +23,18 @@ public class HistoryQuizz {
     public HistoryQuizz() {
     }
 
-    public HistoryQuizz(Long id, User user, List<Quizz> quizzs, Integer point) {
+    public HistoryQuizz(int id, User user, List<Quizz> quizzs, Integer point) {
         this.id = id;
         this.user = user;
         this.quizzs = quizzs;
         this.point = point;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

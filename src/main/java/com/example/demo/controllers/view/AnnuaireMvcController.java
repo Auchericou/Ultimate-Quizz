@@ -1,3 +1,4 @@
+/*
 package com.example.demo.controllers.view;
 
 import com.example.demo.entities.Personne;
@@ -20,12 +21,12 @@ public class AnnuaireMvcController {
     @GetMapping("/annuaire")
     public String getAnnuaireView(Model model) {
         model.addAttribute("personnes", annuaireService.getPersonnes());
-        return "annuaire.html";
+        return "";
     }
 
     @GetMapping("/ajouter/personne")
     public String addPersonnePage() {
-        return "ajouterPersonne.html";
+        return "";
     }
 
     @PostMapping("/ajouter/addPersonne")
@@ -34,3 +35,4 @@ public class AnnuaireMvcController {
         httpServletResponse.sendRedirect("/annuaire");
     }
 }
+*/

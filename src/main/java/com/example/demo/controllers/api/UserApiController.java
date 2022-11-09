@@ -1,6 +1,5 @@
 package com.example.demo.controllers.api;
 
-import com.example.demo.entities.Personne;
 import com.example.demo.entities.User;
 import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

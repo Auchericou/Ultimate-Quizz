@@ -11,7 +11,7 @@ public class Theme {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(nullable = false , unique = true , length = 255)
     private String name;
@@ -19,7 +19,7 @@ public class Theme {
     public Theme() {
     }
 
-    public Theme(Long id, String name) {
+    public Theme(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -28,11 +28,11 @@ public class Theme {
     @JoinColumn(name = "quizz_id")
     private List<Quizz> quizzs = new ArrayList<>();
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

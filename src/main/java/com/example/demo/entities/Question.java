@@ -10,7 +10,7 @@ import java.util.List;
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(nullable = false, length = 255)
     private String label;
@@ -25,7 +25,7 @@ public class Question {
     public Question() {
     }
 
-    public Question(Long id, String label, Quizz quizz, List<Answer> answers) {
+    public Question(int id, String label, Quizz quizz, List<Answer> answers) {
         this.id = id;
         this.label = label;
         this.quizz = quizz;
@@ -41,11 +41,11 @@ public class Question {
     }
 
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
