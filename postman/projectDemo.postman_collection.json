@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "f2e823d0-4db5-4763-86a3-291a17a062f0",
+		"name": "Project DEMO SpringBoot ESIMED 2022",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "personne",
+			"item": [
+				{
+					"name": "personne update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"prenom\": \"toto\",\n    \"nom\": \"nom2\",\n    \"age\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}personne/1",
+							"host": [
+								"{{url}}personne"
+							],
+							"path": [
+								"1"
+							],
+							"query": [
+								{
+									"key": "nom",
+									"value": "nom",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personnes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}personnes",
+							"host": [
+								"{{url}}personnes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}personne/1",
+							"host": [
+								"{{url}}personne"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personne delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}personne/2",
+							"host": [
+								"{{url}}personne"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "personne add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prenom\": \"prenom1\",\n    \"nom\": \"nom1\",\n    \"age\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}personne",
+							"host": [
+								"{{url}}personne"
+							],
+							"query": [
+								{
+									"key": "nom",
+									"value": "nom",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}hello",
+					"host": [
+						"{{url}}hello"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/"
+		}
+	]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annuaire</title>
+</head>
+<body>
+    <h1>Annuaire de personnes (<span th:text="${ personnes.size() }"></span>)</h1>
+    <button onclick="window.location.assign('/ajouter/personne')">Ajouter une personne</button>
+
+    <p th:if="${ personnes.size() == 0 }">
+        L'annuaire est vide
+    </p>
+    <table th:if="${ personnes.size() > 0 }">
+        <thead>
+            <th>ID</th>
+            <th>NOM</th>
+            <th>PRENOM</th>
+            <th>AGE</th>
+            <th>ACTIONS</th>
+        </thead>
+        <tbody>
+            <tr th:each="p: ${personnes}">
+                <td th:text="${p.id}"></td>
+                <td th:text="${p.nom}">dkl</td>
+                <td th:text="${p.prenom}">d</td>
+                <td th:text="${p.age}">d</td>
+                <td>
+                    <button>Update</button>
+                    <button>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
