@@ -16,7 +16,10 @@ public class Answer {
     private Boolean isCorrect;
 
     @ManyToOne
+    @JoinColumn(name = "question_id")
     private Question question;
+
+
 
     public Answer(int id, String label, Boolean isCorrect, Question question) {
         this.id = id;

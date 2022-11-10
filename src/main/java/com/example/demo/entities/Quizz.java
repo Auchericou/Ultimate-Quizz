@@ -22,10 +22,11 @@ public class Quizz {
     private Boolean isActive;
 
     @ManyToOne
+    @JoinColumn(name = "theme_id")
     private Theme theme;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "question_id")
     private List<Question> questions = new ArrayList<>();
 
 /*    @ManyToMany
