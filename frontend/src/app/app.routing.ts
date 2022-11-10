@@ -49,7 +49,6 @@ export const appRoutes: Route[] = [
             layout: 'empty',
         },
         children: [
-            {path: 'quizz', loadChildren: () => import('app/modules/quizz/quizz.module').then(m => m.QuizzModule)},
             {path: 'sign-out', loadChildren: () => import('app/modules/auth/sign-out/sign-out.module').then(m => m.AuthSignOutModule)},
         ]
     },
@@ -63,6 +62,8 @@ export const appRoutes: Route[] = [
         },
         children   : [
             {path: 'home', loadChildren: () => import('app/modules/landing/home/home.module').then(m => m.LandingHomeModule)},
+            {path: 'quizz', loadChildren: () => import('app/modules/quizz/quizz.module').then(m => m.QuizzModule)},
+            {path: 'sign-out', loadChildren: () => import('app/modules/auth/sign-out/sign-out.module').then(m => m.AuthSignOutModule)},
         ]
     },
 

@@ -25,11 +25,8 @@ public class QuestionApiService {
     }
 
     @GetMapping("questions")
-    public List<Question> getUser(@RequestParam(value = "username", required = false) int id) {
-        if(id == 0) {
-            return this.questionService.getQuestions();
-        }
-        return this.questionService.getQuestionById(id);
+    public List<Question> getQuestions() {
+        return this.questionService.getQuestions();
     }
 
     @PostMapping("question")

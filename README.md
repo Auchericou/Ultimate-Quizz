@@ -23,5 +23,5 @@ cd ./frontend && npm install && npm run start
 | Url      | Details   | Compte Dev| Mot de passe
 |----------|-----------|-----------|-----------|
 |http://localhost:4200| Frontend Angular|stephanie|azerty
-|https://localhost:8080/swagger/index.html| Swagger|
-|https://localhost:8080/api| Api Java Spring|
+|http://localhost:8080/swagger-ui/index.html| Swagger|
+|http://localhost:8080/api| Api Java Spring|

@@ -28,8 +28,6 @@ public class Quizz {
     @JoinColumn(name = "question_id")
     private List<Question> questions = new ArrayList<>();
 
-
-
     @ManyToMany
     @JoinTable(name="history_quizz",
             joinColumns = {@JoinColumn(name = "quizz_id")},
