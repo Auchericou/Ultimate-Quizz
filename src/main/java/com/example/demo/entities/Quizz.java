@@ -25,14 +25,14 @@ public class Quizz {
     private Theme theme;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "question_id")
+    @JoinColumn(name = "id")
     private List<Question> questions = new ArrayList<>();
 
-    @ManyToMany
-    @JoinTable(name="history_quizz",
-            joinColumns = {@JoinColumn(name = "quizz_id")},
-            inverseJoinColumns = {@JoinColumn(name = "history_quizz_id")})
-    private List<HistoryQuizz> historyQuizzs = new ArrayList<>();
+/*    @ManyToMany
+    @JoinTable(name="historyquizzs",
+            joinColumns = {@JoinColumn(name = "id")},
+            inverseJoinColumns = {@JoinColumn(name = "quizzs_id")})
+    private List<HistoryQuizz> historyQuizzs = new ArrayList<>();*/
 
     public Quizz() {
     }

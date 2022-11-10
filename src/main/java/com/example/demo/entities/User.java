@@ -29,11 +29,13 @@ public class User {
     @Column(name= "isAdmin", nullable = false)
     private boolean isAdmin;
 
-    @ManyToMany
-    @JoinTable(name="history_quizz",
-    joinColumns = {@JoinColumn(name = "user_id")},
-    inverseJoinColumns = {@JoinColumn(name = "history_quizz_id")})
-    private List<HistoryQuizz> historyQuizzs = new ArrayList<>();
+/*    @ManyToMany
+    @JoinTable(name="historyquizzs",
+    joinColumns = {@JoinColumn(name = "id")},
+    inverseJoinColumns = {@JoinColumn(name = "users_id")})
+    private List<HistoryQuizz> historyQuizzs = new ArrayList<>();*/
+
+
 
     public User() {
     }
@@ -106,7 +108,7 @@ public class User {
         isAdmin = admin;
     }
 
-    public List<HistoryQuizz> getHistoryQuizzs() {
+/*    public List<HistoryQuizz> getHistoryQuizzs() {
         return historyQuizzs;
     }
     public void addHistoryQuizz(HistoryQuizz historyQuizz)
@@ -116,5 +118,5 @@ public class User {
 
     public void setHistoryQuizzs(List<HistoryQuizz> historyQuizzs) {
         this.historyQuizzs = historyQuizzs;
-    }
+    }*/
 }

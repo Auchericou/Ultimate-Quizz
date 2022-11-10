@@ -25,7 +25,7 @@ public class Theme {
     }
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "quizz_id")
+    @JoinColumn(name = "id")
     private List<Quizz> quizzs = new ArrayList<>();
 
     public int getId() {

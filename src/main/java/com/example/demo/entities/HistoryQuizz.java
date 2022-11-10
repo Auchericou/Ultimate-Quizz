@@ -10,12 +10,21 @@ public class HistoryQuizz {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+/*    @ManyToOne
+    private User user;*/
+
+/*    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id")
+    private List<Quizz> quizzs = new ArrayList<>();*/
+
     @ManyToOne
+    @JoinColumn(name = "quizz_id")
+    private Quizz quizz;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "quizz_id")
-    private List<Quizz> quizzs = new ArrayList<>();
 
     @Column(nullable = false)
     private Integer point;
@@ -23,10 +32,10 @@ public class HistoryQuizz {
     public HistoryQuizz() {
     }
 
-    public HistoryQuizz(int id, User user, List<Quizz> quizzs, Integer point) {
+    public HistoryQuizz(int id, User user, Quizz quizz, Integer point) {
         this.id = id;
         this.user = user;
-        this.quizzs = quizzs;
+        this.quizz = quizz;
         this.point = point;
     }
 
@@ -46,12 +55,12 @@ public class HistoryQuizz {
         this.user = user;
     }
 
-    public List<Quizz> getQuizzs() {
-        return quizzs;
+    public Quizz getQuizz() {
+        return quizz;
     }
 
-    public void setQuizzs(List<Quizz> quizzs) {
-        this.quizzs = quizzs;
+    public void setQuizz(List<Quizz> quizzs) {
+        this.quizz = quizz;
     }
 
     public Integer getPoint() {

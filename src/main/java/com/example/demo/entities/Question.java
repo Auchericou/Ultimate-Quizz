@@ -19,7 +19,7 @@ public class Question {
     private Quizz quizz;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "answer_id")
+    @JoinColumn(name = "id")
     private List<Answer> answers = new ArrayList<>();
 
     public Question() {
